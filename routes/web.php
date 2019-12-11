@@ -15,10 +15,20 @@ $router->get('/', function () use ($router) {
     return redirect()->route('login');
 });
 
+// Login related routes
 $router->get('login', [
     'as' => 'login', 
     'uses' => 'UserController@login'
 ]);
 $router->post('login', [
     'uses' => 'UserController@validateLogin'
+]);
+
+// Register related routes
+$router->get('register', [
+    'as' => 'register', 
+    'uses' => 'UserController@register'
+]);
+$router->post('register', [
+    'uses' => 'UserController@store'
 ]);
