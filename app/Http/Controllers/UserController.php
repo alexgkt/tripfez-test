@@ -86,15 +86,23 @@ class UserController extends Controller
             ];
         }
         else {
+            // Initiate new User
             $user = new User;
+            // Set username
             $user->username = $username;
+            // Set password
             $user->password = $password;
+            // Set name
             $user->name = $name;
+            // Set email
             $user->email = $email;
+            // Set notes if provided
             if (!empty($notes)) {
                 $user->notes = $notes;
             }
+            // Save new user object
             $user->save();
+            
             $message = [
                 'success' => 'Account succesfully created.'
             ];
