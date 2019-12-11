@@ -19,12 +19,12 @@
 
     <form action="/login" method="post">
     <div class="form-group">
-        <label>Username</label>
-        <input name="username" class="form-control" id="username">
+        <label>Username *</label>
+        <input name="username" class="form-control" id="username" required>
     </div>
     <div class="form-group">
-        <label>Password</label>
-        <input name="password" class="form-control" id="password">
+        <label>Password *</label>
+        <input name="password" class="form-control" id="password" required>
     </div>
     <button type="submit" class="btn btn-success">Login</button>
     <a class="btn btn-primary" href="/register">Register</a>
