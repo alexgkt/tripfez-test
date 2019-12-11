@@ -12,5 +12,13 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return redirect()->route('login');
 });
+
+$router->get('login', [
+    'as' => 'login', 
+    'uses' => 'UserController@login'
+]);
+$router->post('login', [
+    'uses' => 'UserController@validateLogin'
+]);
