@@ -15,4 +15,15 @@ class User extends Model
     public function validatePassword ($password) {
         return password_verify($password, $this->password);
     }
+
+    /**
+     * Set hashed password
+     *
+     * @param  string  $value
+     * @return void
+     */
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = password_hash($value, PASSWORD_DEFAULT);
+    }
 }
