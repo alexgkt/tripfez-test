@@ -17,3 +17,11 @@ Car method initialise the $brand & $color variable. SpecialCar variable extends 
 # Engineering - Logic
 
 ### Logic (Logic Folder)
+1. Check if max no. of guests excluding infant doesn't exceed 7
+2. Check if there is at least 1 adult in the booking
+3. Check if there's 1 adult per infant in the booking
+4. Check there is only the set max amount of adult, children & infant per room
+5. Check if there is at least 1 adult per assigned room
+6. Check if the assigned room is less than or equal to the set max amount of room
+
+
